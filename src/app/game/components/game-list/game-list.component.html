@@ -1,5 +1,9 @@
-<table>
-  <tr>
-    <app-game-list-item [name]="game.name" [console]="game.console"></app-game-list-item>
-  </tr>
+<table class="table">
+  <tbody>
+    <tr *ngFor="let game of gameList; index as i" (click)="selectGame(i)">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ game.name }}</td>
+      <td>{{ game.console }}</td>
+    </tr>
+  </tbody>
 </table>

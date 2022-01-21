@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, Input} from '@angular/core';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
@@ -7,6 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GameListComponent {
 
-  @Input() game: any;
+  @Input() gameList: any;
+
+  constructor(private router: Router) {}
+
+  selectGame(id: number): void{
+
+    console.log(id);
+    this.router.navigate(['./games/'+ id + "/details"]);
+
+  }
 
 }

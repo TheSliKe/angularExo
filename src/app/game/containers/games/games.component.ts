@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamesComponent{
 
-  gameList = [
+  public gameList = [
     {id: 1, name: 'mario', console: 'Nes'},
     {id: 2, name: 'Zelda', console: 'N64'},
     {id: 3, name: 'COD', console: 'PC'}
