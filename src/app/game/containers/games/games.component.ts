@@ -13,7 +13,7 @@ export class GamesComponent{
     {id: 3, name: 'COD', console: 'PC'}
   ];
 
-  gameNotEmpty(): boolean {
+  gameListNotEmpty(): boolean {
 
     if (this.gameList.length > 0) {
       return true;

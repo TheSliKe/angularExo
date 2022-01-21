@@ -13,7 +13,6 @@ export class GameListComponent {
 
   selectGame(id: number): void{
 
-    console.log(id);
     this.router.navigate(['./games/'+ id + "/details"]);
 
   }

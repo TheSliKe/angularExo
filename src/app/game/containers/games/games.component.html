@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light" style="background-color:darkorchid;">
+<nav class="navbar navbar-light" style="background-color:rgb(145, 70, 255);">
   <div class="container-fluid">
     <a class="navbar-brand">HCTIWT</a>
     <form class="d-flex">
@@ -11,18 +11,18 @@
 <div class="container" style="margin-left: 0px; height: 100%;">
   <div class="row">
 
-    <div class="col-2 " style="background-color:rgb(163, 163, 163); height: 100vh;">
+    <div class="col-2 " style="background-color:rgb(229, 229, 229); height: 100vh;">
       <h5>Recommandation</h5>
 
     </div>
 
     <div class="col-10">
 
-      <div *ngIf="gameNotEmpty()" >
+      <div *ngIf="gameListNotEmpty()" >
         <app-game-list [gameList]="gameList"></app-game-list>
       </div>
 
-      <div *ngIf="!gameNotEmpty()" >
+      <div *ngIf="!gameListNotEmpty()" >
         <h1>Pas de jeux</h1>
       </div>
 
