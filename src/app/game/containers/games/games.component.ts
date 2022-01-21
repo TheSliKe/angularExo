@@ -5,11 +5,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.scss']
 })
-export class GamesComponent implements OnInit {
+export class GamesComponent{
 
-  constructor() { }
+  gameList = [
+    {id: 1, name: 'mario', console: 'Nes'},
+    {id: 2, name: 'Zelda', console: 'N64'},
+    {id: 3, name: 'COD', console: 'PC'}
+  ];
 
-  ngOnInit(): void {
+  gameNotEmpty(): boolean {
+
+    if (this.gameList.length > 0) {
+      return true;
+    }
+    return false;
   }
 
 }

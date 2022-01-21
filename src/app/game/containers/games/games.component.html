@@ -1,1 +1,10 @@
-<p>games works!</p>
+<h1>Games</h1>
+
+<div *ngIf="gameNotEmpty()" >
+  <app-game-list *ngFor="let game of gameList" [game]="game"></app-game-list>
+</div>
+
+<div *ngIf="!gameNotEmpty()" >
+  <h1>Pas de jeux</h1>
+</div>
+
